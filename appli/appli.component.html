@@ -1,0 +1,73 @@
+<div class="fform">
+    <div *ngIf="mobiles;else err" class="container mob-table" >
+
+    <div class="headers">
+        <h2 class="table-title">Grocery List</h2>
+        <button class="btn add " (click) ="openForm()">Add Item</button>
+
+    </div>
+    <table  class="table">
+        <thead>
+            <tr>
+                <th>ItemName</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>TotalCost</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody class="text-center">
+            <tr *ngFor="let mobile of mobiles">
+                <td>{{mobile['ItemName']}}</td>
+                <td>{{mobile['Quantity']}}</td>
+                <td>{{mobile['Price']}}</td>
+                <td>{{mobile['TotalCost']}}</td>
+                <td>
+                    <button class="btn btn-primary"(click)="openForm(mobile)">Edit Item</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger" (click)="deleteMobile(mobile['id'])">Delete Item</button>
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
+</div>
+
+<ng-template #err >
+
+    <p class="text-danger">error fetching data</p>
+
+</ng-template>
+
+<div class="form-wrapper" *ngIf="showForm">
+    <div class="mobileForm">
+        <h2 class="text-info text-center">{{formHeader}}</h2>
+        <div class="group">
+            <label for="mobile">Item</label>
+            <input type="text" class="form-control" [(ngModel)]="itemName" name="mname" required minlength="5">
+        </div>
+        <div class="group">
+            <label for="price">Quantity</label>
+            <input type="number" class="form-control" [(ngModel)]="quantity" name="price" required min="1000">
+        </div>
+        <div class="group">
+            <label for="ram">Price</label>
+            <input type="number" class="form-control" [(ngModel)]="price" name="ram" required min="1">
+        </div>
+        <div class="group">
+            <label for="storage">Total</label>
+            <input type="number" class="form-control" [(ngModel)]="totalCost" name="storage" required min="1">
+        </div>
+
+        <div class="action">
+            <button class="btn btn-primary save" (click)="saveMobile()">Save Changes</button>
+            <button class="btn btn-danger cancel" (click)="closeForm()">Cancel</button>
+        </div>
+    </div>
+</div>
+

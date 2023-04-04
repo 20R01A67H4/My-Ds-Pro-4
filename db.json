@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "ItemName": "Aashirvad aata",
+      "Quantity": 1,
+      "Price": 55,
+      "TotalCost": 110,
+      "id": 1
+    },
+    {
+      "ItemName": "Red Lable",
+      "Quantity": 3,
+      "Price": 273,
+      "TotalCost": 819,
+      "id": 2
+    },
+    {
+      "ItemName": "Sugar",
+      "Quantity": 4,
+      "Price": 40,
+      "TotalCost": 160,
+      "id": 3
+    },
+    {
+      "ItemName": "santoor soap mega pack",
+      "Quantity": 2,
+      "Price": 160,
+      "TotalCost": 320,
+      "id": 4
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

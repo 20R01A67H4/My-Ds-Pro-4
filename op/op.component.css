@@ -1,0 +1,28 @@
+
+.class1{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.class1 ul{
+    display:flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 20px;
+    background-color: blueviolet;
+    border-radius: 10vw;
+    padding:0px;
+
+}
+
+.class1 ul:hover{
+    box-shadow:0 0 5px blueviolet,0 0  25px blueviolet,
+    0 0  50px blueviolet,0 0  100px blueviolet,0 0  200px blueviolet;
+}
+.class1 ul li{
+ padding:20px;
+}
+.class1 ul a{
+    text-decoration: none;
+    color:black;
+}
